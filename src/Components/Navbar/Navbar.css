@@ -1,0 +1,145 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  border: 2px solid black;
+  min-width: 180px; /* Increased width */
+}
+
+
+.location input {
+  border: none;
+  background: transparent;
+  margin: 0 20px;
+  outline: none;
+  font-size: 14px;
+  width: 80px;
+}
+
+.search-icon, .arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Center Section */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 24px;
+  max-width: 600px; /* Increased max-width */
+}
+
+.search-input {
+  flex: 1;
+  padding: 15px 30px;
+  border: 2px solid black;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #002f34;
+  padding: 15px 14px;
+  border: 2px  black;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+
+.search-button img {
+  width: 16px;
+  filter: invert(100%);
+}
+
+/* Right Section */
+.navbar-right {
+    
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-select {
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.favorite-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: #002f34;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sell-btn {
+  background-color: white;
+  color: #002f34;
+  border: 2px solid #002f34;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sell-btn:hover {
+  background-color: #002f34;
+  color: white;
+}
+.user-name {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}

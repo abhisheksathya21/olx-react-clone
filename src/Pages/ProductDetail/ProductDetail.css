@@ -1,0 +1,14 @@
+.product-detail-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.product-detail-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
