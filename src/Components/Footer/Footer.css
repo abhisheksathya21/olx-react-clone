@@ -1,0 +1,64 @@
+.olx-footer {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #666;
+  padding: 40px 20px 0;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1 1 180px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-section p {
+  font-size: 13px;
+  margin: 4px 0;
+  color: #999;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social-icons i {
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+}
+
+.store-badge {
+  width: 120px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  background-color: #002f6c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.footer-bottom .brands {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}

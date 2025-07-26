@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Modal, ModalBody } from 'flowbite-react';
 import Input from '../../Input/Input';
 import './EditAdModal.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const EditAdModal = ({ ad, onClose, onSave }) => {
   const [title, setTitle] = useState(ad.title || '');
@@ -13,7 +15,7 @@ const EditAdModal = ({ ad, onClose, onSave }) => {
     e.preventDefault();
 
     if (!title.trim() || !category.trim() || !price || !description.trim()) {
-      alert('Please fill in all fields.');
+      toast.error('Please fill in all fields.');
       return;
     }
 

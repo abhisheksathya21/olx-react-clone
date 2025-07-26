@@ -7,6 +7,8 @@ import favorite from '../../assets/favorite.svg';
 import { useAuth } from '../../Context/auth';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../utils/firebase';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 import './Navbar.css';
 
@@ -18,6 +20,7 @@ const Navbar = ({ toggleModal, toggleSellModal }) => {
     try {
       await signOut(auth);
       navigate('/');
+      toast.success("successfully logedout")
     } catch (error) {
       console.error("Logout failed:", error);
     }

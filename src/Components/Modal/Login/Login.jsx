@@ -5,6 +5,8 @@ import close from '../../../assets/close.svg';
 import './Login.css';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../../../utils/firebase';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = ({ toggleModal, status }) => {
 

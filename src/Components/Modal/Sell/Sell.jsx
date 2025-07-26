@@ -8,6 +8,8 @@ import Input from '../../Input/Input';
 import { useAuth } from '../../../Context/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import { fetchFromFireStore, fireStore } from '../../../utils/firebase';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const Sell = ({ toggleSellModal, status, setItems }) => {
   const [title, setTitle] = useState('');
@@ -43,7 +45,7 @@ const Sell = ({ toggleSellModal, status, setItems }) => {
     event.preventDefault();
 
     if (!user) {
-      alert('Please login to continue...');
+      toast.error('Please login to continue...');
       return;
     }
 
@@ -66,7 +68,7 @@ const Sell = ({ toggleSellModal, status, setItems }) => {
     const trimmedDescription = description.trim();
 
     if (!trimmedTitle || !trimmedCategory || !trimmedDescription || !price) {
-      alert('All fields are required');
+      toast.error('All fields are required');
       setSubmitting(false);
       return;
     }
@@ -88,7 +90,7 @@ const Sell = ({ toggleSellModal, status, setItems }) => {
       toggleSellModal();
     } catch (error) {
       console.error(error);
-      alert('Failed to add product to Firestore');
+      toast.error('Failed to add product to Firestore');
     } finally {
       setSubmitting(false);
     }

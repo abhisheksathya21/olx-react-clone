@@ -3,8 +3,11 @@ import { fetchUserAds, deleteAdById } from '../../utils/firebase';
 import { useAuth } from '../../Context/auth';
 import './MyAds.css';
 import Navbar from '../../Components/Navbar/Navbar';
+
 import EditAdModal from '../../Components/Modal/EditAdModal/EditAdModal';
 import { updateAdById } from '../../utils/firebase';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 
 const MyAds = () => {
@@ -40,22 +43,23 @@ const MyAds = () => {
       await deleteAdById(adId);
       // Remove from local state
       setMyAds((prevAds) => prevAds.filter((ad) => ad.id !== adId));
+      toast.success("deleted");
     } catch (error) {
       console.error('Failed to delete ad:', error);
-      alert('Failed to delete ad. Please try again.');
+      toast.error('Failed to delete ad. Please try again.');
     }
   };
 
   const handleSaveEdit = async (adId, updatedData) => {
   try {
     await updateAdById(adId, updatedData);
-    // Update local state
     const updatedAds = myAds.map(ad => ad.id === adId ? { ...ad, ...updatedData } : ad);
     setMyAds(updatedAds);
     setSelectedAd(null);
+    toast.success("updated");
   } catch (error) {
     console.error('Failed to update ad:', error);
-    alert("Failed to update ad");
+    toast.error("Failed to update ad");
   }
 };
 

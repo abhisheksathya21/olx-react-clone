@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { fireStore } from '../../utils/firebase';
 import Navbar from '../../Components/Navbar/Navbar';
+import 'react-toastify/dist/ReactToastify.css';
+
 import './ProductDetail.css'; // Optional: your styles
 
 const ProductDetail = () => {

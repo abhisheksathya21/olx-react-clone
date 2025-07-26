@@ -5,6 +5,9 @@ import Sell from '../../Components/Modal/Sell/Sell';
 import Card from '../../Components/Card/Card';
 import { ItemContext } from '../../Context/item';
 import { fetchFromFireStore } from '../../utils/firebase';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Home = () => {
 
   const [openModal,setModal]=useState(false);
@@ -39,7 +42,7 @@ console.log('updated Items:',itemsctx.items);
       <Login toggleModal={toggleModal} status={openModal} />
       <Sell setItems={(itemsctx).setItems} toggleSellModal={toggleSellModal} status={openSellModal}/>
       <Card items={(itemsctx).items || []}/>
-    
+   
     </div>
   )
 }
